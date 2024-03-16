@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Adherents>
+  <adherent numero="1">
+    <nom>test1</nom>
+    <prenom>ptest1</prenom>
+    <adresse>atest1</adresse>
+    <email>test1@gmail.com</email>
+  </adherent>
+  <adherent numero="2">
+    <nom>test2</nom>
+    <prenom>ptest2</prenom>
+    <adresse>atest2</adresse>
+    <email>test2@gmail.com</email>
+  </adherent>
+  <adherent numero="3">
+    <nom>test3</nom>
+    <prenom>ptest3</prenom>
+    <adresse>atest3</adresse>
+    <email>test3@gmail.com</email>
+  </adherent>
+  <adherent numero="4">
+    <nom>test4</nom>
+    <prenom>ptest4</prenom>
+    <adresse>atest4</adresse>
+    <email>test4@gmail.com</email>
+  </adherent>
+  <adherent numero="5">
+    <nom>test5</nom>
+    <prenom>ptest5</prenom>
+    <adresse>atest5</adresse>
+    <email>test5@gmail.com</email>
+  </adherent>
+</Adherents>

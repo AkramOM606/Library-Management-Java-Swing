@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Oeuvres>
+  <oeuvre id="1">
+    <titre>ttest1</titre>
+    <categorie>ctest1</categorie>
+    <auteur>atest1</auteur>
+    <editeur>etest1</editeur>
+    <launchdate>2023</launchdate>
+    <statut>non disponible</statut>
+  </oeuvre>
+  <oeuvre id="2">
+    <titre>ttest2</titre>
+    <categorie>ctest2</categorie>
+    <auteur>atest2</auteur>
+    <editeur>etest2</editeur>
+    <launchdate>2023</launchdate>
+    <statut>disponible</statut>
+  </oeuvre>
+  <oeuvre id="3">
+    <titre>ttest3</titre>
+    <categorie>ctest3</categorie>
+    <auteur>atest3</auteur>
+    <editeur>etest3</editeur>
+    <launchdate>2023</launchdate>
+    <statut>disponible</statut>
+  </oeuvre>
+  <oeuvre id="4">
+    <titre>ttest4</titre>
+    <categorie>ctest4</categorie>
+    <auteur>atest4</auteur>
+    <editeur>etest4</editeur>
+    <launchdate>2023</launchdate>
+    <statut>disponible</statut>
+  </oeuvre>
+  <oeuvre id="5">
+    <titre>ttest5</titre>
+    <categorie>ctest5</categorie>
+    <auteur>atest5</auteur>
+    <editeur>etest5</editeur>
+    <launchdate>2023</launchdate>
+    <statut>disponible</statut>
+  </oeuvre>
+</Oeuvres>
