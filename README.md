@@ -1,32 +1,40 @@
-# Media Library Manager
+## Library Management System (Java Swing & XML)
 
 ## Overview
-The Media Library Manager is a Java Swing application designed to organize books, customers, and lending activities within a media library. It uses XML as the database for storing data.
+This project is a library management system developed using Java Swing for the graphical user interface (GUI) and XML for data storage. It allows users to manage books, library members, and lending operations.
 
 ## Features
-- **Works Management:**
-    - Add or remove a work from the collection
-    - Search for a specific work
-    - Display all items in the collection
-    - Filter items by category
+- **Book Management:**
+    - **Add/Remove a Book from the Collection:** Add or remove books from the library's collection.
+    - **Search for a Book:** Search for books by title, author, or other criteria.
+    - **Display All Books:** Display a list of all books in the collection.
+    - **Display All Books in a Category:** Filter and display books belonging to a specific category.
 
 - **Members Management:**
-    - Add a member
-    - Remove a member
-    - Display members
+    - **Add a member:** Create a new member profile.
+    - **Remove a member:** Delete an existing member profile.
+    - **Display members:** View a list of all registered members.
 
-- **Loans Management:**
-    - Borrow a work
-    - Display loans
+- **Lending Management:**
+    - **Borrow a Book:** Record a book being borrowed by a member.
+    - **Display Borrowed Books:** View a list of currently borrowed books.
 
 ## Getting Started
-1. Clone this repository.
-2. Compile and run the Java code.
-3. Ensure you have the necessary dependencies (Java, Swing, etc.).
 
-## Usage
-- Launch the application.
-- Use the buttons in the GUI to perform various actions related to works, members, and loans.
+**Prerequisites:**
+- Java Development Kit (JDK) ([https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html))
+- A code editor or IDE (e.g., VSCode, IntelliJ IDEA, Eclipse)
+
+**Steps:**
+1. Clone this repository.
+2. Open the project in your preferred IDE.
+3. Locate the main class (`App.java`).
+4. Run the main class to launch the application.
+
+## Technologies Used
+
+- Java Swing: For creating the GUI
+- XML: For storing library data
 
 ## Contributions
 Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
