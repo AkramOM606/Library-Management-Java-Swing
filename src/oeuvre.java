@@ -76,7 +76,7 @@ public class oeuvre {
 
     @Override
     public String toString() {
-        return "oeuvre [id=" + id + ", titre=" + titre + ", categorie=" + categorie + ", auteur=" + auteur
-                + ", editeur=" + editeur + ", launchdate=" + launchdate + ", statut=" + statut + "]";
+        return "Book [ID=" + id + ", Title=" + titre + ", Category=" + categorie + ", Author=" + auteur
+                + ", Publisher=" + editeur + ", ReleaseDate=" + launchdate + ", Status=" + statut + "]";
     }
 }

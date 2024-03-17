@@ -54,13 +54,13 @@ public class mediatheque {
             OXML.setStatut(OXML.get(pr.getIdoeuvre()), "non disponible");
             return true;
         } else {
-            System.out.println("Impossible d'emprunter !");
+            System.out.println("Impossible to lend !");
             return false;
         }
     }
 
     public void eventB1() {
-        int choice = JOptionPane.showOptionDialog(null, "Choisissez une option :", "Ajouter ou Supprimer ?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Ajouter une oeuvre", "Supprimer une oeuvre"}, null);
+        int choice = JOptionPane.showOptionDialog(null, "Choose an option :", "Add or Remove?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Add a book", "Delete a book"}, null);
         if (choice == 0) {
             JPanel dialogPanel = new JPanel(new GridLayout(0, 2));
             JTextField idField = new JTextField();
@@ -72,42 +72,42 @@ public class mediatheque {
             JTextField statusField = new JTextField();
             dialogPanel.add(new JLabel("ID :"));
             dialogPanel.add(idField);
-            dialogPanel.add(new JLabel("Titre :"));
+            dialogPanel.add(new JLabel("Title :"));
             dialogPanel.add(titleField);
-            dialogPanel.add(new JLabel("Categorie:"));
+            dialogPanel.add(new JLabel("Category :"));
             dialogPanel.add(categoryField);
-            dialogPanel.add(new JLabel("Auteur :"));
+            dialogPanel.add(new JLabel("Author :"));
             dialogPanel.add(authorField);
-            dialogPanel.add(new JLabel("Editeur :"));
+            dialogPanel.add(new JLabel("Publisher :"));
             dialogPanel.add(publisherField);
-            dialogPanel.add(new JLabel("Annee de sortie :"));
+            dialogPanel.add(new JLabel("Release date :"));
             dialogPanel.add(launchDateField);
-            dialogPanel.add(new JLabel("Statut :"));	
+            dialogPanel.add(new JLabel("Status :"));	
             dialogPanel.add(statusField);
         
-            int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Ajouter une oeuvre", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Add a book", JOptionPane.OK_CANCEL_OPTION);
             if (result == JOptionPane.OK_OPTION) {
                 addOeuvre(new oeuvre(Integer.parseInt(idField.getText()), titleField.getText(), categoryField.getText(), authorField.getText(), publisherField.getText(), Integer.parseInt(launchDateField.getText()), statusField.getText()));
                 System.out.println("Added !");
             }   
         } else if (choice == 1) {
-            int choice1 = JOptionPane.showOptionDialog(null, "Choisissez une option :", "Titre ou ID ?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Selection par Titre", "Selection par ID"}, null);
+            int choice1 = JOptionPane.showOptionDialog(null, "Choose an option :", "Title or ID ?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Selection by Title", "Selection by ID"}, null);
             if (choice1 == 0 ) {
                 JPanel panel = new JPanel();
-                panel.add(new JLabel("Entrer le titre de l'oeuvre a supprimer :"));
+                panel.add(new JLabel("Enter the title of the book to be deleted :"));
                 JTextField textField = new JTextField(20);
                 panel.add(textField);
-                int result = JOptionPane.showConfirmDialog(null, panel, "Titre de l'oeuvre", JOptionPane.OK_CANCEL_OPTION);
+                int result = JOptionPane.showConfirmDialog(null, panel, "Title of the book", JOptionPane.OK_CANCEL_OPTION);
                 if (result == JOptionPane.OK_OPTION) {
                     deleteOeuvre(new oeuvre(0, textField.getText(), null, null, null,0, null));
                     System.out.println("Deleted ?!");
                 }
             } else if (choice1 == 1) {
                 JPanel panel = new JPanel();
-                panel.add(new JLabel("Entrer l'ID de l'oeuvre a supprimer :"));
+                panel.add(new JLabel("Enter the ID of the book to be deleted :"));
                 JTextField textField = new JTextField(20);
                 panel.add(textField);
-                int result = JOptionPane.showConfirmDialog(null, panel, "ID de l'oeuvre", JOptionPane.OK_CANCEL_OPTION);
+                int result = JOptionPane.showConfirmDialog(null, panel, "ID of the book", JOptionPane.OK_CANCEL_OPTION);
                 if (result == JOptionPane.OK_OPTION) {
                     deleteOeuvre(new oeuvre(Integer.parseInt(textField.getText()), null, null, null, null, 0, null));
                 }
@@ -117,10 +117,10 @@ public class mediatheque {
 
     public void eventB2() {
         JPanel panel = new JPanel();
-        panel.add(new JLabel("Entrer l'ID ou bien le titre de l'oeuvre a chercher :"));
+        panel.add(new JLabel("Enter the ID or title of the book to search for :"));
         JTextField textField = new JTextField(20);
         panel.add(textField);
-        int result = JOptionPane.showConfirmDialog(null, panel, "ID/Titre de l'oeuvre", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, panel, "ID/Title of book", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             oeuvre oeu = new oeuvre();
             try {
@@ -130,10 +130,10 @@ public class mediatheque {
             }
 
             if (oeu != null) {
-                String message = "ID :" + oeu.getId() +  "\nCategorie: " + oeu.getCategorie() + "\nTitre: " + oeu.getTitre() + "\nEditeur: " + oeu.getEditeur() + "\nDate de sortie: " + oeu.getLaunchdate() + "\nStatut: " + oeu.getStatut();
+                String message = "ID :" + oeu.getId() +  "\nCategory: " + oeu.getCategorie() + "\nTitle: " + oeu.getTitre() + "\nPublisher: " + oeu.getEditeur() + "\nRelease date: " + oeu.getLaunchdate() + "\nStatus: " + oeu.getStatut();
                 JOptionPane.showMessageDialog(null, message);               
             } else {
-                JOptionPane.showMessageDialog(null, "Introuvable", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Not Found !", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -141,16 +141,16 @@ public class mediatheque {
     public void eventB34(String x) {
         if (!x.equals("*")) {
             JPanel panel = new JPanel();
-            panel.add(new JLabel("Entrer la categorie :"));
+            panel.add(new JLabel("Enter category :"));
             JTextField textField = new JTextField(20);
             panel.add(textField);
-            int result = JOptionPane.showConfirmDialog(null, panel, "Categorie ?", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, panel, "Category ?", JOptionPane.OK_CANCEL_OPTION);
             if (result == JOptionPane.OK_OPTION) {
                 x = textField.getText();
             }
         }
 
-        String[] columnNames = {"ID", "Titre", "Categorie", "Auteur", "Editeur", "Date de sortie", "Statut"};
+        String[] columnNames = {"ID", "Title", "Category", "Author", "Publisher", "Release date", "Status"};
 
         ArrayList<ArrayList<String>> data = OXML.print(x);
         
@@ -172,7 +172,7 @@ public class mediatheque {
             frame.pack();
             frame.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "Introuvable", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Not Found !", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -183,18 +183,18 @@ public class mediatheque {
         JTextField prenom = new JTextField();
         JTextField adresse = new JTextField();
         JTextField email = new JTextField();
-        dialogPanel.add(new JLabel("Numero d'adherent :"));
+        dialogPanel.add(new JLabel("Member ID :"));
         dialogPanel.add(numeroAd);
-        dialogPanel.add(new JLabel("Nom :"));
+        dialogPanel.add(new JLabel("Last name :"));
         dialogPanel.add(nom);
-        dialogPanel.add(new JLabel("Prenom :"));
+        dialogPanel.add(new JLabel("First name :"));
         dialogPanel.add(prenom);
-        dialogPanel.add(new JLabel("Adresse :"));
+        dialogPanel.add(new JLabel("Address :"));
         dialogPanel.add(adresse);
         dialogPanel.add(new JLabel("E-mail :"));
         dialogPanel.add(email);
 
-        int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Ajouter un adherent", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Add a member", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             addAdherent(new adherent(Integer.parseInt(numeroAd.getText()), nom.getText(), prenom.getText(), adresse.getText(), email.getText()));
             System.out.println("Added !");
@@ -202,22 +202,22 @@ public class mediatheque {
     }
 
     public void eventB6() {
-        int choice = JOptionPane.showOptionDialog(null, "Choisissez une option :", "ID ou E-mail ?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Selection par ID", "Selection par E-mail"}, null);
+        int choice = JOptionPane.showOptionDialog(null, "Choose an option :", "ID or E-mail ?", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Selection by ID", "Selection by E-mail"}, null);
         if (choice == 0 ) {
             JPanel panel = new JPanel();
-            panel.add(new JLabel("Entrer l'ID de l'adherent a supprimer :"));
+            panel.add(new JLabel("Enter the ID of the member to be deleted :"));
             JTextField textField = new JTextField(20);
             panel.add(textField);
-            int result = JOptionPane.showConfirmDialog(null, panel, "ID de l'adherent", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, panel, "Member ID", JOptionPane.OK_CANCEL_OPTION);
             if (result == JOptionPane.OK_OPTION) {
                 deleteAdherent(new adherent(Integer.parseInt(textField.getText()), null, null, null, null));
             }
         } else if (choice == 1) {
             JPanel panel = new JPanel();
-            panel.add(new JLabel("Entrer l'e-mail de l'adherent a supprimer :"));
+            panel.add(new JLabel("Enter the e-mail address of the member to be deleted :"));
             JTextField textField = new JTextField(20);
             panel.add(textField);
-            int result = JOptionPane.showConfirmDialog(null, panel, "ID de l'oeuvre", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, panel, "Book ID", JOptionPane.OK_CANCEL_OPTION);
             if (result == JOptionPane.OK_OPTION) {
                 deleteAdherent(new adherent(0, null, null, null, textField.getText()));
             }
@@ -225,7 +225,7 @@ public class mediatheque {
     }
 
     public void eventB7() {
-        String[] columnNames = {"ID", "Nom", "Prenom", "Adresse", "E-mail"};
+        String[] columnNames = {"ID", "Last name", "First name", "Address", "E-mail"};
 
         ArrayList<ArrayList<String>> data = AXML.print();
         
@@ -247,7 +247,7 @@ public class mediatheque {
             frame.pack();
             frame.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "Introuvable", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Not Found !", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -256,22 +256,22 @@ public class mediatheque {
         JTextField pretdate = new JTextField();
         JTextField idadherent = new JTextField();
         JTextField idoeuvre = new JTextField();
-        dialogPanel.add(new JLabel("Date de prete :"));
+        dialogPanel.add(new JLabel("Lending date :"));
         dialogPanel.add(pretdate);
-        dialogPanel.add(new JLabel("ID d'adherent :"));
+        dialogPanel.add(new JLabel("Member ID :"));
         dialogPanel.add(idadherent);
-        dialogPanel.add(new JLabel("ID d'oeuvre :"));
+        dialogPanel.add(new JLabel("Book ID :"));
         dialogPanel.add(idoeuvre);
-        int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Preter LOG", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, dialogPanel, "Lending Information", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             if (!emprunter(new pret(pretdate.getText(), Integer.parseInt(idadherent.getText()), Integer.parseInt(idoeuvre.getText())))) {
-                JOptionPane.showMessageDialog(null, "Impossible d'emprunter", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Impossible to lend", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
 
     public void eventB9() {
-        String[] columnNames = {"Date de prete", "ID adherent", "ID oeuvre"};
+        String[] columnNames = {"Lending date", "Member ID", "Book ID"};
 
         ArrayList<ArrayList<String>> data = PXML.print();
         
@@ -293,7 +293,7 @@ public class mediatheque {
             frame.pack();
             frame.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "Introuvable", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Not Found !", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

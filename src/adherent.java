@@ -56,7 +56,7 @@ public class adherent {
     }
 
     public String toString() {
-        return "adherent [numero=" + numero + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse
-                + ", email=" + email + "]";
+        return "Member [ID=" + numero + ", LastName=" + nom + ", FirstName=" + prenom + ", Address=" + adresse
+                + ", Email=" + email + "]";
     }    
 }

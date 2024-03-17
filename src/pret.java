@@ -36,6 +36,6 @@ public class pret {
     }
 
     public String toString() {
-        return "pret [pretdate=" + pretdate + ", idadherant=" + idadherant + ", idoeuvre=" + idoeuvre + "]";
+        return "Lending [LendingDate=" + pretdate + ", MemberID=" + idadherant + ", BookID=" + idoeuvre + "]";
     }
 }
