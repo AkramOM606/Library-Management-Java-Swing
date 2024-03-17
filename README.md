@@ -2,6 +2,7 @@
 
 ## Overview
 This project is a library management system developed using Java Swing for the graphical user interface (GUI) and XML for data storage. It allows users to manage books, library members, and lending operations.
+![Library Management System GUI](https://github.com/AkramOM606/Library-Management-Java-Swing/assets/162604610/4c0a87d0-8ed1-43f2-981e-6cf4f883b367)
 
 ## Features
 - **Book Management:**
