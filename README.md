@@ -40,3 +40,7 @@ This project is a library management system developed using Java Swing for the g
 
 ## Contributions
 Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT) (see LICENSE.md for details).
